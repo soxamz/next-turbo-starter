@@ -19,7 +19,9 @@ export default function Home() {
       <div className="flex flex-wrap items-center justify-center gap-3">
         <Button asChild size="lg">
           <a
-            href="http://localhost:3001/docs"
+            href={
+              process.env.NEXT_PUBLIC_DOCS_URL || "http://localhost:3001/docs"
+            }
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +30,7 @@ export default function Home() {
         </Button>
         <Button variant="outline" size="lg" asChild>
           <a
-            href="https://github.com"
+            href={process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com"}
             target="_blank"
             rel="noopener noreferrer"
           >
